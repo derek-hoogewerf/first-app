@@ -1,4 +1,4 @@
-var logger = require('./logger');
+const logger = require('./logger');
 
 //console.log(logger);          to check log for module
 
