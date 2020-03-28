@@ -1,5 +1,5 @@
-const logger = require('./logger');
+const log = require('./logger');
 
 //console.log(logger);          to check log for module
 
-logger.log('message')
+log('message');
