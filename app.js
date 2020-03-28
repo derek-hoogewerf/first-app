@@ -1,5 +1,12 @@
-const log = require('./logger');
+const EventEmitter = require('events');
+const emitter = new EventEmitter(); 
 
-//console.log(logger);          to check log for module
+//Register a listener
+emitter.on('messageLogged', (arg) => {
+    console.log('Listener called', arg);
+});
 
-log('message');
+//raise event
+emitter.emit('messageLogged', {id: 1, url: 'http://'});
+
+//Raise: logging(data: message)
